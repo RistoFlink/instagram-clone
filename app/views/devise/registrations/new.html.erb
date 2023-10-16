@@ -9,7 +9,11 @@
          
      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class: "w-100"}) do |f| %>
         <div class="mb-3">
-          <%= f.email_field :email, placeholder: "Email", class:"form-control", autocomplete: "email", :autofocus => true %>
+          <%= f.text_field :username, placeholder: "Username", class:"form-control", :autofocus => true %>
+        </div>
+
+        <div class="mb-3">
+          <%= f.email_field :email, placeholder: "Email", class:"form-control", :autofocus => true %>
         </div>
 
         <div class="mb-3">
@@ -36,7 +40,7 @@
 </div>
   <div class="card py-2" style="width: 28rem">
     <div class="card-body">
-      <p class="mb-0 fs-6 text-center">Don't have an account? <%= link_to "Log in", root_path, class: "standard-link" %></p>
+      <p class="mb-0 fs-6 text-center">Already have an account? <%= link_to "Log in", root_path, class: "standard-link" %></p>
    </div> 
   </div>
 </div>
